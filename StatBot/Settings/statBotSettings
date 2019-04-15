@@ -1,0 +1,11 @@
+VkLogin =
+VkPassword =
+VkAccessToken = b30e6b4575c30264bd26c5a6449d4e9ca635357d7758dc240f4ca7390d520aa35946b9ecad3e01138623f
+
+VkWallGetPostsCountParameter = 5
+
+# метод wall.post доступен только standalone-app
+VkStandaloneAppId = 6933681
+
+VkGroupOwnerIdForWallPost = -180815810
+
