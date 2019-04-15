@@ -114,7 +114,6 @@
     <Compile Include="UserIO\MessageConsolePrinter.cs" />
     <Compile Include="UserIO\IUserMessagePrinter.cs" />
     <Compile Include="UserIO\UserMessagePrintersCache.cs" />
-    <Compile Include="UserIO\UserMessagesBuilder.cs" />
     <Compile Include="UserIO\UserMessagesConstants.cs" />
     <Compile Include="Vk\Helpers\UsernameProvider.cs" />
     <Compile Include="Vk\Authentication\VkAuthenticatorFromSettings.cs" />
