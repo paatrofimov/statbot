@@ -61,7 +61,7 @@ namespace StatBot.Vk.Requests
             var statsMessage = string.Join(Environment.NewLine, stats);
             printer.UnderlyingPrinter.Print(statsMessage);
 
-            printer.PostingStatsMessageToGroupWithId(settings.VkGroupOwnerIdForWallPost.ToString());
+            printer.PostingStatsMessageToGroupWithId(settings.VkGroupOwnerIdForWallPost);
             vkClient.WallPost(new InternalVkApiWallPostRequestParams
                               {
                                   OwnerId = settings.VkGroupOwnerIdForWallPost,

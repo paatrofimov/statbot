@@ -14,7 +14,6 @@
         void RequestExecutionStarted();
         void RequestExecutionEnded();
         void NoUserOrGroup(string screenName);
-        void PostingStatsMessageToGroupWithId(string groupId);
-        void PostingStatsMessageToGroupWithId1(string groupId);
+        void PostingStatsMessageToGroupWithId(long groupId);
     }
 }

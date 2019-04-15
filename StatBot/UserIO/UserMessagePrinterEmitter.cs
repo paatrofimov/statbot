@@ -59,9 +59,15 @@ namespace StatBot.UserIO
 
                 for (var i = 0; i < parameterInfos.Length; i++)
                 {
-                    EmitStringConcat(methodIl, parameterInfos[i].Name + ": ");
+                    var parameterInfo = parameterInfos[i];
+
+                    EmitStringConcat(methodIl, parameterInfo.Name + ": ");
 
                     methodIl.Emit(OpCodes.Ldarg, i + 1);
+                    if (parameterInfo.ParameterType.IsValueType)
+                    {
+                        methodIl.Emit(OpCodes.Box, parameterInfo.ParameterType);
+                    }
                     methodIl.Emit(OpCodes.Callvirt, typeof(object).GetMethod("ToString", new Type[0]));
                     EmitStringConcat(methodIl);
 
@@ -78,7 +84,7 @@ namespace StatBot.UserIO
 
             var implType = type.CreateType();
 
-            assembly.Save(namePrefix + "DynamicAssembly" + ".dll");
+           // assembly.Save(namePrefix + "DynamicAssembly" + ".dll"); // for debug
 
             return implType;
         }
